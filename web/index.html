@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kwuash</title>
+
+    <link rel="stylesheet" href="/res/stylesheets/main.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="/res/scripts/main.js"></script>
+</head>
+<body>
+    <div class="container is-flex">
+        <div class="balance-box" id="balance">
+            <h2 class="balance-desc">
+                Balance: 
+            </h2>
+            <h1 class="balance-title">
+                <span class="balance-currency" id="currency">₹</span>
+                <span class="balance-value" id="balance-amount">0.00</span>
+            </h1>
+        </div>
+
+        <div class="history-box box" id="history-box">
+            <div class="message-container" id="message-container"></div>
+            <div class="user-actions">
+                <div class="buttons">
+                    <button class="button button-success" onclick="add_in_money();">
+                        <span class="icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </button>
+                    
+                    <button class="button button-danger" onclick="add_out_money();">
+                        <span class="icon">
+                            <i class="fas fa-minus"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    init();
+</script>
+</html>
