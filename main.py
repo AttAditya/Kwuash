@@ -39,10 +39,7 @@ def home():
 
 if __name__ == "__main__":
     app.run(
-        host="192.168.5.194", # Scaler WiFi
-        # host="0.0.0.0", # Local
-        # host="192.168.84.97", # Phone
-        port=8000,
-        debug=True
+        host="0.0.0.0",
+        port=8000
     )
 
