@@ -46,7 +46,7 @@ function prompt_box(message, prompt_type, confirm_callback, reject_callback) {
 }
 
 function confirm_box(message, confirm_callback, reject_callback) {
-    start_modal(message, "Do you wish continue?", confirm_callback, reject_callback);
+    start_modal(message, "Do you wish to continue?", confirm_callback, reject_callback);
 }
 
 function alert_box(message, confirm_callback) {
