@@ -6,16 +6,39 @@
 
     <title>Kwuash</title>
 
+    <link rel="shortcut icon" href="/res/images/Kwuash.png">
+
+    <meta name="title" content="Kwuash">
+    <meta name="description" content="Making Budget Easier - Kwuash is a simple app to keep track of your money.">
+    <meta name="keywords" content="Kwuash, Kwuash App, Kwuash Budget, Kwuash Budget App, Kwuash Budget Tracker, Kwuash Budget Tracker App, Kwuash Budget Tracker Web App, Kwuash Budget Web App, Kwuash Tracker, Kwuash Tracker App, Kwuash Budget">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Kwuash">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kwuash-1-v5956112.deta.app/">
+    <meta property="og:title" content="Kwuash">
+    <meta property="og:description" content="Making Budget Easier - Kwuash is a simple app to keep track of your money.">
+    <meta property="og:image" content="/res/images/Banner.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kwuash-1-v5956112.deta.app/">
+    <meta property="twitter:title" content="Kwuash">
+    <meta property="twitter:description" content="Making Budget Easier - Kwuash is a simple app to keep track of your money.">
+    <meta property="twitter:image" content="/res/images/Banner.png">
+
     <link rel="stylesheet" href="/res/stylesheets/main.css">
 
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/a63f2fde7e.js" crossorigin="anonymous"></script>
     <script src="/res/scripts/main.js"></script>
 </head>
 <body>
     <div class="container is-flex">
         <div class="balance-box" id="balance">
             <h2 class="balance-desc">
-                Balance: 
+                Balance:  
             </h2>
             <h1 class="balance-title">
                 <span class="balance-currency" id="currency">₹</span>
@@ -29,16 +52,50 @@
                 <div class="buttons">
                     <button class="button button-success" onclick="add_in_money();">
                         <span class="icon">
-                            <i class="fas fa-plus"></i>
+                            <i class="fa-solid fa-plus"></i>
                         </span>
                     </button>
                     
+                    <button class="button button-warning" onclick="reset_local_history();">
+                        <span class="icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </button>
+
                     <button class="button button-danger" onclick="add_out_money();">
                         <span class="icon">
-                            <i class="fas fa-minus"></i>
+                            <i class="fa-solid fa-minus"></i>
                         </span>
                     </button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h1 class="modal-title" id="modal-title">
+                    Modal Title Placeholder
+                </h1>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <p class="modal-message" id="modal-message">
+                    Modal Message Placeholder
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-button-confirm" class="button button-success" onclick="close_modal();">
+                    <span class="icon">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </button>
+
+                <button id="modal-button-reject" class="button button-danger" onclick="close_modal();">
+                    <span class="icon">
+                        <i class="fa-solid fa-times"></i>
+                    </span>
+                </button>
             </div>
         </div>
     </div>

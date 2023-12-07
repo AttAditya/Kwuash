@@ -1,5 +1,5 @@
 from logging import getLogger, _nameToLevel
-from flask import Flask
+from flask import Flask, Response
 from os.path import isfile
 
 def read_file(
@@ -37,9 +37,16 @@ app = Flask(
 def home():
     return read_file("index")
 
+@app.route("/robots.txt")
+def robots():
+    return Response(
+        read_file("robots", default_extension=".txt"),
+        mimetype="text/plain"
+    )
+
 if __name__ == "__main__":
     app.run(
-        host="0.0.0.0",
+        host="10.101.98.26",
         port=8000
     )
 
